@@ -11,8 +11,8 @@ class Post < ApplicationRecord
     validates :longitude, presence: true
     validates :discover_date, presence: true
 
-    def thumbnail_url
+    def image_url
         # 紐づいている画像のURLを取得する
-        thumbnail.attached? ? url_for(thumbnail) : nil
+        image.attached? ? url_for(image) : nil
     end
 end
